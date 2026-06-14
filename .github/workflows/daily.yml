@@ -2,7 +2,7 @@ name: Daily News Agent
 
 on:
   schedule:
-    - cron: '35 1 * * *'
+    - cron: '35 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -60,6 +60,6 @@ jobs:
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
           # 使用下面这行代码来精确指定当天的文件
           attachments: |
-            article_deep_$(date +'%Y-%m-%d').md,
-            article_odd_$(date +'%Y-%m-%d').md
+            article_deep_$(date +'%Y-%m-%d')-0613.md,
+            article_odd_$(date +'%Y-%m-%d')-0613.md
 
